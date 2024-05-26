@@ -232,11 +232,21 @@ const div = document.querySelector('#render-div')
 products.map((items) =>{
     // console.log(items.name);
     div.innerHTML += `
-    <h1>Product Name : ${items.name}</h1> 
-    <h1> Brand : ${items.brand}</h1> 
-    <h1>Category : ${items.category}</h1>    
-    <h1>Price  :  ${items.price}</h1>
-    <hr>`    
+
+
+    <div  class="card mt-3" style="width: 18rem;">
+    <div  class="card-body ">
+
+      <h5  class="card-title">Name : ${items.name}</h5>
+      <h6  class="card-title"> Brand : ${items.brand}</h6>
+      <p  class="card-text">Category : ${items.category}</p>
+
+      <p  class="card-text">Price : ${items.price}$</p>
+      <a  href="#" class="btn btn-primary">PLACE NOW</a>
+    
+      </div>
+    
+  </div>  `    
 })
 
 const allItems=(btn)=>{
@@ -244,11 +254,21 @@ console.log(btn.innerHTML);
     
     products.map((items) =>{
     div.innerHTML += `
-    <h1>Product Name : ${items.name}</h1> 
-    <h1> Brand : ${items.brand}</h1> 
-    <h1>Category : ${items.category}</h1>    
-    <h1>Price  :  ${items.price}</h1>
-    <hr>`    
+    
+    
+    <div  class="card mt-3" style="width: 18rem;">
+    <div  class="card-body ">
+
+      <h5  class="card-title">Name : ${items.name}</h5>
+      <h6  class="card-title"> Brand : ${items.brand}</h6>
+      <h6  class="card-text">Category : ${items.category}</h6>
+
+      <p  class="card-text">Price : ${items.price}$</p>
+      <a  href="#" class="btn btn-primary">PLACE NOW</a>
+    
+      </div>
+    
+  </div>`    
 })}
 
 
@@ -261,11 +281,20 @@ const filtereditem =  (btn)=>{
     const filtered = products.filter(items=>items.category ===
          btn.innerHTML).map((items)=>{
             div.innerHTML += `
-            <h1>Product Name : ${items.name}</h1> 
-            <h1> Brand : ${items.brand}</h1> 
-            <h1>Category : ${items.category}</h1>    
-            <h1>Price  :  ${items.price}</h1>
-            <hr>`   
+            
+    <div  class="card mt-3" style="width: 18rem;">
+    <div  class="card-body ">
+
+      <h5  class="card-title">Name : ${items.name}</h5>
+      <h6  class="card-title"> Brand : ${items.brand}</h6>
+      <p  class="card-text">Category : ${items.category}</p>
+
+      <p  class="card-text">Price : ${items.price}$</p>
+      <a  href="#" class="btn btn-primary">PLACE NOW</a>
+    
+      </div>
+    
+  </div>`   
          })
     // console.log(filtered);
 }
